@@ -16,34 +16,41 @@
 </head>
 <body>
 <script>
-function myFunction() {
-  var rand_button = document.getElementById("ranb11");
-
-rand_button.addEventListener("click",function(){
-	for(var i = 0;i<5;i++)
-	{
-		var a = 'd' + Math.floor(Math.random()*9 + 1);
-		var b = 'd' + Math.floor(Math.random()*9 + 1);
-		var a1 = document.getElementById(a);
-		var b1 = document.getElementById(b);
-		var x1 = a1.innerHTML;
-		var y1 = b1.innerHTML;
-		a1.innerHTML = y1;
-		b1.innerHTML = x1;
-		var c = 'd' + Math.floor(Math.random()*15 + 10);
-		var d = 'd' + Math.floor(Math.random()*15 + 10);
-		var c1 = document.getElementById(c);
-		var d1 = document.getElementById(d);
-		var x2 = c1.innerHTML;
-		var y2 = d1.innerHTML;
-		c1.innerHTML = y2;
-		d1.innerHTML = x2;
-	}
-});
+function shuffle()
+{
+  var images_array=new Array("images/f1.jpg","images/f2.jpg","images/f3.jpg","images/f4.jpg","images/f5.webp","images/f6.jpg","images/f7.jpg","images/f8.jpg","images/f9.jpg","images/f10.jpg","images/f11.jpg","images/f12.jpg","images/f13.jpg","images/f14.jpg","images/f15.jpg");
+  var ctr=images_array.length,counter,index,i,j;
+  var temp=new Array(ctr);
+  for(i=0;i<ctr;i++)
+  {
+  	index=Math.floor(Math.random()*ctr);
+  	counter=0;
+    for(j=0;j<i;j++)
+    {
+      if(temp[j]==index)
+      {
+        counter++;
+      }
+    }
+    if(counter>0)
+    {
+      i--;
+    }
+    else
+    {
+      temp[i]=index;
+      console.log(temp[i]);
+    }
+    for(i=0;i<ctr;i++)
+    {
+  	 document.getElementById("f"+(i+1)).src=images_array[temp[i]];
+  	}
+  }
 }
+
 </script>
 	<div id="bdiv">
-			<button type="button" class="btn btn-danger" id="ranb11" nClick="myFunction()">Randomize</button>
+			<button type="button" class="btn btn-danger" id="ranb11" onClick="shuffle()">Randomize</button>
 		</div>
 <div id="famp" id="shuffle2">
 			<div class="row">
