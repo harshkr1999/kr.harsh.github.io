@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gallary</title>
+<style>
+#bdiv
+{
+	padding-bottom: 2.5%;
+	text-align: center;
+}
+</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/fe786c7701.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="gallery.css">
+</head>
+<body>
+<script>
+function myFunction() {
+  var rand_button = document.getElementById("ranb11");
+
+rand_button.addEventListener("click",function(){
+	for(var i = 0;i<5;i++)
+	{
+		var a = 'd' + Math.floor(Math.random()*9 + 1);
+		var b = 'd' + Math.floor(Math.random()*9 + 1);
+		var a1 = document.getElementById(a);
+		var b1 = document.getElementById(b);
+		var x1 = a1.innerHTML;
+		var y1 = b1.innerHTML;
+		a1.innerHTML = y1;
+		b1.innerHTML = x1;
+		var c = 'd' + Math.floor(Math.random()*15 + 10);
+		var d = 'd' + Math.floor(Math.random()*15 + 10);
+		var c1 = document.getElementById(c);
+		var d1 = document.getElementById(d);
+		var x2 = c1.innerHTML;
+		var y2 = d1.innerHTML;
+		c1.innerHTML = y2;
+		d1.innerHTML = x2;
+	}
+});
+}
+</script>
+	<div id="bdiv">
+			<button type="button" class="btn btn-danger" id="ranb11" nClick="myFunction()">Randomize</button>
+		</div>
+<div id="famp" id="shuffle2">
+			<div class="row">
+				<div id="d10" class="col-lg-4 col-sm-6">
+					<img src="https://en.as.com/en/imagenes/2019/09/24/football/1569310945_447431_noticia_normal.jpg" class="img-thumbnail">
+				</div>
+				<div id="d11" class="col-lg-4 col-sm-6">
+						<img src="https://cdn.wealthygorilla.com/wp-content/uploads/2016/10/Richest-People-Bill-Gates.webp" class="img-thumbnail">
+				</div>
+				<div id="d12" class="col-lg-4 col-sm-6">				
+					<img src="https://images.newscientist.com/wp-content/uploads/2019/06/18142824/einstein.jpg?width=1200" class="img-thumbnail">		
+				</div>
+			</div>
+			<div class="row">
+				<div id="d13" class="col-lg-4 col-sm-6">				
+						<img src="https://i.ytimg.com/vi/cDxi6ozDwhc/maxresdefault.jpg" class="img-thumbnail">				
+				</div>
+				<div id="d14" class="col-lg-4 col-sm-6">
+						<img src="https://images.daznservices.com/di/library/GOAL/e2/a2/lionel-messi-barcelona-2019-20_6v9f1g8ktz0516nmdti9iowmc.jpg?t=-1288858400&quality=100" class="img-thumbnail">
+				</div>
+				<div id="d15" class="col-lg-4 col-sm-6">
+						<img src="https://cdn.wealthygorilla.com/wp-content/uploads/2016/10/Richest-People-Jeff-Bezos.webp" class="img-thumbnail">
+				</div>
+			</div>
+			<div class="row">
+				<div id="d16" class="col-lg-4 col-sm-6">
+						<img src="https://cdn.wealthygorilla.com/wp-content/uploads/2016/10/Richest-People-Warren-Buffett.webp" class="img-thumbnail">
+				</div>
+				<div id="d17" class="col-lg-4 col-sm-6">
+						<img src="https://cdn.wealthygorilla.com/wp-content/uploads/2016/10/Richest-People-Mark-Zuckerberg.webp" class="img-thumbnail">
+				</div>
+				<div id="d18" class="col-lg-4 col-sm-6">
+						<img src="https://cdn.wealthygorilla.com/wp-content/uploads/2016/10/Richest-People-Larry-Page.webp" class="img-thumbnail">
+				</div>
+			</div>
+			<div class="row">
+				<div id="d19" class="col-lg-4 col-sm-6">
+						<img src="https://cdn.wealthygorilla.com/wp-content/uploads/2016/10/Richest-People-Sergey-Brin.webp" class="img-thumbnail">
+				</div>
+				<div id="d20" class="col-lg-4 col-sm-6">
+						<img src="https://cdn.wealthygorilla.com/wp-content/uploads/2017/08/Richest-People-in-the-World-Mukesh-Ambani.webp" class="img-thumbnail">
+				</div>
+				<div id="d21" class="col-lg-4 col-sm-6">
+						<img src="https://cdn.wealthygorilla.com/wp-content/uploads/2017/08/Richest-People-in-the-World-Jack-Ma.webp" class="img-thumbnail">
+				</div>
+			</div>
+			<div class="row">
+				<div id="d22" class="col-lg-4 col-sm-6">
+						<img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/15DEE/production/_111028598_tom-cruise-getty.jpg" class="img-thumbnail">
+				</div>
+				<div id="d23" class="col-lg-4 col-sm-6">
+						<img src="https://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2019/1/23/65101ffc35c44c83b421a2b3ad88ec56_18.jpg" class="img-thumbnail">
+				</div>
+				<div id="d24" class="col-lg-4 col-sm-6">
+						<img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/D9EF/production/_108319755_d3de1a8a-652f-4de5-b958-b9d7b7d0fb6b.jpg" class="img-thumbnail">
+				</div>
+			</div>
+		</div>	
+	</div>
+
+</body>
+</html>
