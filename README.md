@@ -99,7 +99,7 @@ div.b1 p {
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td>
 		<ul>
-			<li><a href="famous.html"><font color="white"><h2><big>FAMOUS PERSONALITIES</h2></a></li>
+			<li><a href="fp.html"><font color="white"><h2><big>FAMOUS PERSONALITIES</h2></a></li>
 		</ul>	
 </td>
 </tr>
