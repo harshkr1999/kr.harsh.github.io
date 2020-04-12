@@ -3,90 +3,15 @@
 <html>
 <head>
 	<title>movies</title>
-<style>
-#bdiv
-{
-	padding-bottom: 2.5%;
-	text-align: center;
-}
-</style>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<script src="https://kit.fontawesome.com/fe786c7701.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="gallery.css">
+
 </head>
 <body>
-<script>
-function shuffle()
-{
-  var images_array=new Array("movies/1.jpg","movies/2.jpg","movies/3.jpg","movies/4.jpg","movies/5.jpg","movies/6.jpg","movies/7.jpg","movies/8.jpg","movies/9.jpg");
-  var ctr=images_array.length,counter,index,i,j;
-  var temp=new Array(ctr);
-  for(i=0;i<ctr;i++)
-  {
-  	index=Math.floor(Math.random()*ctr);
-  	counter=0;
-    for(j=0;j<i;j++)
-    {
-      if(temp[j]==index)
-      {
-        counter++;
-      }
-    }
-    if(counter>0)
-    {
-      i--;
-    }
-    else
-    {
-      temp[i]=index;
-      console.log(temp[i]);
-    }
-    for(i=0;i<ctr;i++)
-    {
-  	 document.getElementById("f"+(i+1)).src=images_array[temp[i]];
-  	}
-  }
-}
+<center>
+<div>
+<center><button id="jsstyle" onclick="movies();">Random_gen</button> 
+</div>
+<script src="3.js"></script>
 
-</script>
-	<div id="bdiv">
-			<button type="button" class="btn btn-danger" id="ranb11"onClick="shuffle()">Random_gen</button>
-		</div>
 
-		<div id="mov">
-			<div class="row">
-				<div id="d1" class="col-lg-4 col-sm-6">
-					<img src="movies/6.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">
-				</div>
-				<div id="d2" class="col-lg-4 col-sm-6">
-						<img src="movies/2.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">
-				</div>
-				<div id="d3" class="col-lg-4 col-sm-6">				
-					<img src="movies/3.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">		
-				</div>
-			</div>
-			<div class="row">
-				<div id="d4" class="col-lg-4 col-sm-6">				
-						<img src="movies/4.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">				
-				</div>
-				<div id="d5" class="col-lg-4 col-sm-6">
-						<img src="movies/5.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">
-				</div>
-				<div id="d6" class="col-lg-4 col-sm-6">
-						<img src="movies/6.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">
-				</div>
-			</div>
-			<div class="row">
-				<div id="d7" class="col-lg-4 col-sm-6">
-						<img src="movies/7.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">
-				</div>
-				<div id="d8" class="col-lg-4 col-sm-6">
-						<img src="movies/3.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">
-				</div>
-				<div id="d9" class="col-lg-4 col-sm-6">
-						<img src="movies/9.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">
-				</div>
-			</div>	
-		</div>
 </body>
 </html>
