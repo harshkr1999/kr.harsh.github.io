@@ -14,10 +14,41 @@
 	<script src="https://kit.fontawesome.com/fe786c7701.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="gallery.css">
 </head>
-
 <body>
+<script>
+function shuffle()
+{
+  var images_array=new Array("movies/1.jpg","movies/2.jpg","movies/3.jpg","movies/4.jpg","movies/5.jpg","movies/6.jpg","movies/7.jpg","movies/8.jpg","movies/9.jpg");
+  var ctr=images_array.length,counter,index,i,j;
+  var temp=new Array(ctr);
+  for(i=0;i<ctr;i++)
+  {
+  	index=Math.floor(Math.random()*ctr);
+  	counter=0;
+    for(j=0;j<i;j++)
+    {
+      if(temp[j]==index)
+      {
+        counter++;
+      }
+    }
+    if(counter>0)
+    {
+      i--;
+    }
+    else
+    {
+      temp[i]=index;
+      console.log(temp[i]);
+    }
+    for(i=0;i<ctr;i++)
+    {
+  	 document.getElementById("f"+(i+1)).src=images_array[temp[i]];
+  	}
+  }
+}
 
- <script type="text/javascript" src="fp.js"></script>
+</script>
 	<div id="bdiv">
 			<button type="button" class="btn btn-danger" id="ranb11"onClick="shuffle()">Random_gen</button>
 		</div>
@@ -50,7 +81,7 @@
 						<img src="movies/7.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">
 				</div>
 				<div id="d8" class="col-lg-4 col-sm-6">
-						<img src="movies/8.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">
+						<img src="movies/8.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail" height="400">
 				</div>
 				<div id="d9" class="col-lg-4 col-sm-6">
 						<img src="movies/9.jpg?fit=inside|900:auto&output-quality=90" class="img-thumbnail">
